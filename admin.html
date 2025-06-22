@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHeart - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-content">
+            <div class="login-header">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>ConnectHeart Admin</span>
+                </div>
+                <h2>Admin Login</h2>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Enter admin username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter admin password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>ConnectHeart</span>
+                </div>
+                <div class="admin-info">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="overview">
+                        <i class="fas fa-tachometer-alt"></i> Overview
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="users">
+                        <i class="fas fa-users"></i> User Management
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="verification">
+                        <i class="fas fa-check-circle"></i> Verification Queue
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="connections">
+                        <i class="fas fa-heart"></i> Connections
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="payments">
+                        <i class="fas fa-credit-card"></i> Payments
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="analytics">
+                        <i class="fas fa-chart-bar"></i> Analytics
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-section="settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-secondary" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="pageTitle">Dashboard Overview</h1>
+                </div>
+                <div class="header-right">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91 9208438126</span>
+                        <span><i class="fas fa-envelope"></i> pk9208438126@gmail.com</span>
+                    </div>
+                    <div class="admin-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalUsers">0</h3>
+                            <p>Total Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalMen">0</h3>
+                            <p>Men Registered</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalWomen">0</h3>
+                            <p>Women Registered</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="pendingVerifications">0</h3>
+                            <p>Pending Verifications</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="activeConnections">0</h3>
+                            <p>Active Connections</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalRevenue">₹0</h3>
+                            <p>Total Revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Registration Trends</h3>
+                        <div class="chart-placeholder">
+                            <canvas id="registrationChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Revenue Analytics</h3>
+                        <div class="chart-placeholder">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activity items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Management Section -->
+            <section id="users" class="content-section">
+                <div class="section-header">
+                    <h2>User Management</h2>
+                    <div class="section-actions">
+                        <input type="search" placeholder="Search users..." class="search-input">
+                        <select class="filter-select">
+                            <option value="all">All Users</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="verified">Verified</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Registration Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- User data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Verification Queue Section -->
+            <section id="verification" class="content-section">
+                <div class="section-header">
+                    <h2>Verification Queue</h2>
+                    <div class="verification-stats">
+                        <span class="stat-badge pending">Pending: <span id="pendingCount">0</span></span>
+                        <span class="stat-badge approved">Approved: <span id="approvedCount">0</span></span>
+                        <span class="stat-badge rejected">Rejected: <span id="rejectedCount">0</span></span>
+                    </div>
+                </div>
+                <div class="verification-grid" id="verificationGrid">
+                    <!-- Verification cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Connections Section -->
+            <section id="connections" class="content-section">
+                <div class="section-header">
+                    <h2>Active Connections</h2>
+                    <div class="section-actions">
+                        <select class="filter-select">
+                            <option value="all">All Connections</option>
+                            <option value="active">Active</option>
+                            <option value="completed">Completed</option>
+                            <option value="expired">Expired</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="connections-grid" id="connectionsGrid">
+                    <!-- Connection cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Payments Section -->
+            <section id="payments" class="content-section">
+                <div class="section-header">
+                    <h2>Payment Management</h2>
+                    <div class="payment-stats">
+                        <div class="payment-stat">
+                            <span class="amount">₹<span id="todayRevenue">0</span></span>
+                            <span class="label">Today's Revenue</span>
+                        </div>
+                        <div class="payment-stat">
+                            <span class="amount">₹<span id="monthRevenue">0</span></span>
+                            <span class="label">This Month</span>
+                        </div>
+                        <div class="payment-stat">
+                            <span class="amount"><span id="pendingPayments">0</span></span>
+                            <span class="label">Pending Payments</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>User</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTableBody">
+                            <!-- Payment data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="content-section">
+                <div class="section-header">
+                    <h2>Analytics & Reports</h2>
+                    <div class="date-range-picker">
+                        <input type="date" id="startDate">
+                        <span>to</span>
+                        <input type="date" id="endDate">
+                        <button class="btn btn-primary">Generate Report</button>
+                    </div>
+                </div>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h4>User Growth</h4>
+                        <div class="metric">
+                            <span class="number">+<span id="userGrowth">0</span>%</span>
+                            <span class="period">This Month</span>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h4>Success Rate</h4>
+                        <div class="metric">
+                            <span class="number"><span id="successRate">0</span>%</span>
+                            <span class="period">Connections</span>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h4>Average Response Time</h4>
+                        <div class="metric">
+                            <span class="number"><span id="avgResponseTime">0</span>h</span>
+                            <span class="period">Verification</span>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h4>Customer Satisfaction</h4>
+                        <div class="metric">
+                            <span class="number"><span id="satisfaction">0</span>/5</span>
+                            <span class="period">Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h2>System Settings</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h4>Platform Settings</h4>
+                        <div class="setting-item">
+                            <label>Registration Fee - Men</label>
+                            <input type="number" value="1200" id="menFee">
+                        </div>
+                        <div class="setting-item">
+                            <label>Registration Fee - Women</label>
+                            <input type="number" value="2600" id="womenFee">
+                        </div>
+                        <div class="setting-item">
+                            <label>Connection Duration (months)</label>
+                            <input type="number" value="2" id="connectionDuration">
+                        </div>
+                        <div class="setting-item">
+                            <label>Monthly Continuation Fee</label>
+                            <input type="number" value="25000" id="continuationFee">
+                        </div>
+                    </div>
+                    <div class="settings-card">
+                        <h4>Contact Information</h4>
+                        <div class="setting-item">
+                            <label>Phone Number</label>
+                            <input type="tel" value="+91 9208438126" id="phoneNumber">
+                        </div>
+                        <div class="setting-item">
+                            <label>Email Address</label>
+                            <input type="email" value="pk9208438126@gmail.com" id="emailAddress">
+                        </div>
+                        <div class="setting-item">
+                            <label>Support Hours</label>
+                            <input type="text" value="24/7 Available" id="supportHours">
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-actions">
+                    <button class="btn btn-primary" onclick="saveSettings()">
+                        <i class="fas fa-save"></i> Save Settings
+                    </button>
+                    <button class="btn btn-secondary" onclick="resetSettings()">
+                        <i class="fas fa-undo"></i> Reset to Default
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

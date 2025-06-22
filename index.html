@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHeart - Premium Connection Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>ConnectHeart</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your Perfect Connection</h1>
+                <p class="hero-subtitle">A premium platform for meaningful connections between childless women and dedicated men. Experience genuine relationships built on mutual support and commitment.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openRegistrationModal()">
+                        <i class="fab fa-google"></i> Register with Google
+                    </button>
+                    <button class="btn btn-secondary" onclick="openRegistrationModal()">
+                        <i class="fas fa-mobile-alt"></i> Register with Mobile
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Secure Connections</h3>
+                        <p>Privacy-focused matching</p>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="element element-1">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="element element-2">
+                            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="element element-3">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9L15.09 9.74L12 16L8.91 9.74L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose ConnectHeart?</h2>
+            <div class="features-intro">
+                <div class="intro-image">
+                    <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="60" cy="60" r="25" fill="url(#grad1)" opacity="0.8"/>
+                        <circle cx="140" cy="60" r="25" fill="url(#grad1)" opacity="0.8"/>
+                        <path d="M85 60 Q100 40 115 60" stroke="url(#grad1)" stroke-width="3" fill="none"/>
+                        <circle cx="100" cy="100" r="15" fill="#f59e0b"/>
+                        <path d="M100 85 L100 115 M85 100 L115 100" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <p class="intro-text">Experience a new way of connecting with complete privacy and mutual respect</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Complete Privacy</h3>
+                    <p>No cameras, videos, or photos. Connect through secure codes for maximum privacy and safety.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time-Limited Experience</h3>
+                    <p>Focused 2-month connection period to build meaningful relationships without endless browsing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Mutual Support System</h3>
+                    <p>Women provide emotional support while men contribute through dedicated effort and commitment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verified Registration</h3>
+                    <p>Secure registration with mobile number, selfie photo, and government ID verification for authentic connections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear, upfront pricing with no hidden fees. One-time payment for the entire experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Code-Based Matching</h3>
+                    <p>Unique code system ensures secure and private connections between members.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="pricing-bg">
+            <svg width="100%" height="100%" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="pricing-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="2" fill="#6366f1" opacity="0.1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pricing-pattern)"/>
+                <circle cx="200" cy="150" r="100" fill="#ec4899" opacity="0.05"/>
+                <circle cx="1000" cy="200" r="150" fill="#f59e0b" opacity="0.05"/>
+                <circle cx="600" cy="500" r="80" fill="#6366f1" opacity="0.05"/>
+            </svg>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card men">
+                    <div class="pricing-header">
+                        <div class="pricing-avatar">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="url(#maleGrad)"/>
+                                <circle cx="40" cy="30" r="12" fill="white" opacity="0.9"/>
+                                <path d="M20 65 Q40 50 60 65" fill="white" opacity="0.9"/>
+                                <defs>
+                                    <linearGradient id="maleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>For Men</h3>
+                        <div class="price">₹1,200</div>
+                        <p>One-time joining fee</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 2-month access</li>
+                        <li><i class="fas fa-check"></i> Code-based matching</li>
+                        <li><i class="fas fa-check"></i> Secure communication</li>
+                        <li><i class="fas fa-check"></i> No additional fees</li>
+                        <li><i class="fas fa-check"></i> Privacy guaranteed</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openRegistrationModal('men')">Join Now</button>
+                </div>
+                <div class="pricing-card women">
+                    <div class="pricing-header">
+                        <div class="pricing-avatar">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="url(#femaleGrad)"/>
+                                <circle cx="40" cy="30" r="12" fill="white" opacity="0.9"/>
+                                <path d="M20 65 Q40 50 60 65" fill="white" opacity="0.9"/>
+                                <circle cx="35" cy="28" r="2" fill="#ec4899"/>
+                                <circle cx="45" cy="28" r="2" fill="#ec4899"/>
+                                <defs>
+                                    <linearGradient id="femaleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>For Women</h3>
+                        <div class="price">₹2,600</div>
+                        <p>One-time joining fee</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 2-month access</li>
+                        <li><i class="fas fa-check"></i> Support system included</li>
+                        <li><i class="fas fa-check"></i> Meeting arrangements</li>
+                        <li><i class="fas fa-check"></i> 60% support fee deposit</li>
+                        <li><i class="fas fa-check"></i> ₹25,000/month guarantee</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openRegistrationModal('women')">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-visual">
+                <svg width="100%" height="100" viewBox="0 0 800 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="process-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ec4899;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 50 Q200 20 350 50 Q500 80 650 50 Q700 40 750 50" stroke="url(#process-grad)" stroke-width="3" fill="none"/>
+                    <circle cx="50" cy="50" r="8" fill="#6366f1"/>
+                    <circle cx="300" cy="50" r="8" fill="#ec4899"/>
+                    <circle cx="550" cy="50" r="8" fill="#f59e0b"/>
+                    <circle cx="750" cy="50" r="8" fill="#10b981"/>
+                </svg>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Register & Verify</h3>
+                        <p>Complete registration with mobile number, upload selfie photo and government ID for verification.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Payment & Approval</h3>
+                        <p>Pay the joining fee and wait for document verification approval (within 24 hours).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Your Code</h3>
+                        <p>Receive your unique connection code after successful verification and payment.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Build Relationships</h3>
+                        <p>Develop meaningful connections over the 2-month period with mutual support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p class="contact-detail">
+                            <a href="tel:+919208438126">+91 9208438126</a>
+                        </p>
+                        <p class="contact-description">Available 24/7 for your queries and support</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="currentColor"/>
+                                <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p class="contact-detail">
+                            <a href="mailto:pk9208438126@gmail.com">pk9208438126@gmail.com</a>
+                        </p>
+                        <p class="contact-description">Get detailed responses to your queries via email</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                                <polyline points="12,6 12,12 16,14" stroke="white" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Support Hours</h3>
+                        <p class="contact-detail">24/7 Available</p>
+                        <p class="contact-description">Round-the-clock support for all members</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="currentColor"/>
+                                <circle cx="12" cy="10" r="3" fill="white"/>
+                            </svg>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p class="contact-detail">ConnectHeart Office</p>
+                        <p class="contact-description">Professional consultation by appointment</p>
+                    </div>
+                </div>
+                <div class="contact-form-section">
+                    <div class="contact-form-card">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" placeholder="Your Phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Select Inquiry Type</option>
+                                    <option value="registration">Registration Query</option>
+                                    <option value="pricing">Pricing Information</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <div class="cta-card">
+                    <h3>Ready to Connect?</h3>
+                    <p>Join thousands of satisfied members who found their perfect connection</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+919208438126" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> Call: +91 9208438126
+                        </a>
+                        <a href="mailto:pk9208438126@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Email Us
+                        </a>
+                        <button class="btn btn-secondary" onclick="openRegistrationModal()">
+                            <i class="fas fa-user-plus"></i> Register Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegistrationModal()">&times;</span>
+            <h2>Join ConnectHeart</h2>
+            <form id="registrationForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Registration Type</label>
+                    <select id="userType" required>
+                        <option value="">Select Type</option>
+                        <option value="men">Men (₹1,200)</option>
+                        <option value="women">Women (₹2,600)</option>
+                    </select>
+                </div>
+
+                <!-- Step 1: Basic Information -->
+                <div class="registration-step" id="step1">
+                    <h4>Step 1: Basic Information</h4>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number *</label>
+                        <input type="tel" id="mobileNumber" placeholder="+91 XXXXXXXXXX" pattern="[+][9][1][0-9]{10}" required>
+                        <small>Format: +91XXXXXXXXXX</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="emailAddress" placeholder="your.email@example.com">
+                        <small>Optional - for updates and notifications</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Age *</label>
+                        <input type="number" id="age" placeholder="Enter your age" min="18" max="60" required>
+                    </div>
+                </div>
+
+                <!-- Step 2: Document Verification -->
+                <div class="registration-step" id="step2" style="display: none;">
+                    <h4>Step 2: Document Verification</h4>
+                    <div class="form-group">
+                        <label>Selfie Photo *</label>
+                        <div class="file-upload-area" onclick="document.getElementById('selfiePhoto').click()">
+                            <i class="fas fa-camera"></i>
+                            <p>Click to upload your selfie</p>
+                            <small>Clear front-facing photo (JPG, PNG - Max 5MB)</small>
+                        </div>
+                        <input type="file" id="selfiePhoto" accept="image/jpeg,image/jpg,image/png" required style="display: none;">
+                        <div id="selfiePreview" class="image-preview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government ID *</label>
+                        <select id="idType" required>
+                            <option value="">Select ID Type</option>
+                            <option value="aadhar">Aadhar Card</option>
+                            <option value="pan">PAN Card</option>
+                            <option value="passport">Passport</option>
+                            <option value="driving">Driving License</option>
+                            <option value="voter">Voter ID</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Government ID *</label>
+                        <div class="file-upload-area" onclick="document.getElementById('govId').click()">
+                            <i class="fas fa-id-card"></i>
+                            <p>Click to upload your ID document</p>
+                            <small>Clear, readable image (JPG, PNG - Max 5MB)</small>
+                        </div>
+                        <input type="file" id="govId" accept="image/jpeg,image/jpg,image/png" required style="display: none;">
+                        <div id="idPreview" class="image-preview"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Verification & Payment -->
+                <div class="registration-step" id="step3" style="display: none;">
+                    <h4>Step 3: Verification & Agreement</h4>
+                    <div class="verification-info">
+                        <div class="info-card">
+                            <i class="fas fa-shield-check"></i>
+                            <h5>Privacy Guarantee</h5>
+                            <p>Your documents are encrypted and used only for verification purposes.</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h5>Quick Verification</h5>
+                            <p>Documents are verified within 24 hours of submission.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <label for="agreeTerms">I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="verifyInfo" required>
+                            <label for="verifyInfo">I confirm that all information provided is accurate and truthful *</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="ageConfirm" required>
+                            <label for="ageConfirm">I confirm that I am 18 years or older *</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" id="prevBtn" class="btn btn-secondary" onclick="changeStep(-1)" style="display: none;">Previous</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary" onclick="changeStep(1)">Next</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary" style="display: none;">
+                        <i class="fas fa-credit-card"></i> Proceed to Payment
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decoration">
+            <svg width="100%" height="100" viewBox="0 0 1200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 50 Q300 10 600 50 T1200 50 V100 H0 V50Z" fill="rgba(99, 102, 241, 0.1)"/>
+                <path d="M0 70 Q400 30 800 70 T1200 70 V100 H0 V70Z" fill="rgba(236, 72, 153, 0.1)"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heart"></i>
+                        <span>ConnectHeart</span>
+                    </div>
+                    <p>Building meaningful connections with privacy and respect.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919208438126">+91 9208438126</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:pk9208438126@gmail.com">pk9208438126@gmail.com</a></p>
+                        <p><i class="fas fa-clock"></i> Available 24/7</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="tel:+919208438126">Call: +91 9208438126</a></li>
+                        <li><a href="mailto:pk9208438126@gmail.com">Email: pk9208438126@gmail.com</a></li>
+                        <li><a href="#contact">Contact Form</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ConnectHeart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="tel:+919208438126" class="floating-btn phone-btn" title="Call +91 9208438126">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:pk9208438126@gmail.com" class="floating-btn email-btn" title="Email pk9208438126@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
